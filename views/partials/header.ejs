@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Suscriptores</title>
+
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        /* Navbar */
+        nav {
+            background: #1a1a1a;
+            padding: 10px 20px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Layout general */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8f8f8;
+        }
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="/suscriptores/crear">Crear Suscriptor</a></li>
+        <li><a href="/suscriptores/buscar-id">Buscar por ID</a></li>
+        <li><a href="/suscriptores/buscar-rango">Buscar por Rango de Fechas</a></li>
+        <li><a href="/suscriptores/todos">Listar Todos</a></li>
+    </ul>
+</nav>
+
+<main>

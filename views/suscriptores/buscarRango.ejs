@@ -1,0 +1,15 @@
+<%- include("../partials/header") %>
+
+<h2>Buscar por rango de fechas</h2>
+
+<form method="POST" action="/suscriptores/buscar-rango">
+    <label>Desde:</label>
+    <input type="date" name="desde" required>
+
+    <label>Hasta:</label>
+    <input type="date" name="hasta" required>
+
+    <button type="submit">Consultar</button>
+</form>
+
+<%- include("../partials/footer") %>

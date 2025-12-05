@@ -1,0 +1,11 @@
+<%- include("../partials/header") %>
+
+<h2>Buscar suscriptor por ID</h2>
+
+<form method="POST" action="/suscriptores/buscar-id">
+    <label>ID:</label>
+    <input type="number" name="id" required />
+    <button type="submit">Buscar</button>
+</form>
+
+<%- include("../partials/footer") %>

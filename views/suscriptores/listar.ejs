@@ -1,0 +1,39 @@
+<%- include("../partials/header") %>
+
+<h2>Listado de Suscriptores</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Intereses</th>
+            <th>Fecha creación</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <% data.forEach(s => { %>
+        <tr>
+            <td><%= s.id %></td>
+            <td><%= s.nombre %></td>
+            <td><%= s.email %></td>
+
+            <!-- Mostrar intereses o vacío -->
+            <td>
+                <% if (s.intereses && s.intereses.length > 0) { %>
+                    <%= s.intereses.map(i => i.nombre).join(", ") %>
+                <% } else { %>
+                    ---
+                <% } %>
+            </td>
+
+            <td><%= s.createdAt.toLocaleString() %></td>
+        </tr>
+    <% }) %>
+
+    </tbody>
+</table>
+
+<%- include("../partials/footer") %>

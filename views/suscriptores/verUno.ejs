@@ -1,0 +1,14 @@
+<%- include("../partials/header") %>
+
+<h2>Suscriptor encontrado</h2>
+
+<% if (data) { %>
+    <p><strong>ID:</strong> <%= data.id %></p>
+    <p><strong>Nombre:</strong> <%= data.nombre %></p>
+    <p><strong>Email:</strong> <%= data.email %></p>
+    <p><strong>Fecha creación:</strong> <%= data.createdAt.toLocaleString() %></p>
+<% } else { %>
+    <p>No se encontró ningún registro.</p>
+<% } %>
+
+<%- include("../partials/footer") %>
